@@ -1,0 +1,31 @@
+service: aws-node-ts-hello-world
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: cn-northwest-1
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+          authorizer: 
+            type: aws_iam          
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+
+custom:
+  esbuild:
+    sourcemap: true
+  serverless-offline:
+    # ignoreJWTSignature: true
+    noPrependStageInUrl: true
+    noAuth: true
+
+#  - serverless-plugin-typescript
+# https://github.com/dherault/serverless-offline/issues/1311

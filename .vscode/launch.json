@@ -1,0 +1,57 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "command": "npm run invoke:local",
+      "name": "[hello-world] invoke local",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/hello-world"
+    },
+    {
+      "command": "npm run offline",
+      "name": "[hello-world] offline",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/hello-world"
+    },
+    {
+      "command": "npm run offline",
+      "name": "[aws-http-api-ts] offline",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/aws-http-api-ts"
+    },
+    {
+      "command": "npm run invoke:local",
+      "name": "[aws-http-api-ts] invoke:local",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/aws-http-api-ts"
+    },
+    {
+      "command": "npm run offline",
+      "name": "[aws-http-api-ts-esbuild] offline",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/aws-http-api-ts-esbuild"
+    },
+    {
+      "command": "npm run invoke:local",
+      "name": "[aws-scheduled-cron] invoke:local",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/aws-scheduled-cron"
+    },
+    {
+      "command": "npm run offline",
+      "name": "[aws-express-api-ts] offline",
+      "request": "launch",
+      "type": "node-terminal",
+      "cwd": "${workspaceFolder}/apps/aws-express-api-ts"
+    }
+  ]
+}

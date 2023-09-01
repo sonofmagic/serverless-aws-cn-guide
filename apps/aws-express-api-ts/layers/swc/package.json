@@ -1,0 +1,9 @@
+{
+  "name": "layer-for-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@swc/core": "^1.3.80"
+  }
+}

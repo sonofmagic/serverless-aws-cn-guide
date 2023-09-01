@@ -1,0 +1,28 @@
+service: aws-scheduled-cron
+frameworkVersion: "3"
+# 表达式参考文档
+# https://www.serverless.com/framework/docs/providers/aws/events/schedule
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: cn-northwest-1
+
+functions:
+  rateHandler:
+    handler: index.run
+    events:
+      # 每分钟
+      - schedule: rate(1 minute)
+      # 每2小时
+      # - schedule: rate(2 hours)
+  cronHandler:
+    handler: index.run
+    events:
+      # 每天上午8点
+      - schedule: cron(0 12 * * ? *)
+
+plugins:
+  - serverless-plugin-typescript
+# custom:
+#   serverlessPluginTypescript:
+#     tsConfigFileLocation: './tsconfig.build.json'

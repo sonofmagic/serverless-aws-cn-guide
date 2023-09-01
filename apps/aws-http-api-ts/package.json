@@ -1,0 +1,29 @@
+{
+  "name": "aws-http-api-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "npm run build && sls deploy --verbose",
+    "invoke:hello": "sls invoke -f hello --log",
+    "invoke:local": "sls invoke local -f hello --data '{\"a\":\"bar\"}'",
+    "offline": "sls offline",
+    "package": "sls package",
+    "build": "tsup"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@icebreakers/foo": "workspace:^"
+  },
+  "tsup": {
+    "entry": [
+      "handler.ts"
+    ],
+    "format": [
+      "cjs"
+    ],
+    "clean": true
+  }
+}

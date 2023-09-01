@@ -1,0 +1,12 @@
+{
+  "name": "layers",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "sls deploy --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

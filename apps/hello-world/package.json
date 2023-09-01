@@ -1,0 +1,20 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "sls deploy --verbose",
+    "invoke:hello": "sls invoke -f hello --log",
+    "invoke:local": "sls invoke local -f hello",
+    "offline": "sls offline",
+    "package": "sls package",
+    "_dev:hello": "sls dev -f hello --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+   
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "aws-scheduled-cron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "sls deploy --verbose",
+    "invoke:remote": "sls invoke -f rateHandler --log",
+    "invoke:local": "sls invoke local -f rateHandler -p ./event.json",
+    "package": "sls package",
+    "logs": "sls logs -f rateHandler"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

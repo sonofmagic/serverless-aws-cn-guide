@@ -1,0 +1,16 @@
+{
+  "name": "aws-http-api-ts-esbuild",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "sls deploy --verbose",
+    "invoke:hello": "sls invoke -f hello --log",
+    "invoke:local": "sls invoke local -f hello --data '{\"a\":\"bar\"}'",
+    "offline": "sls offline",
+    "package": "sls package"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

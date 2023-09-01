@@ -1,0 +1,15 @@
+service: aws-express-api-ts-layer
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: cn-northwest-1
+
+layers:
+  swc:
+    path: swc
+    name: ${sls:stage}-swc
+  puppeteer:
+    path: puppeteer
+    name: ${sls:stage}-puppeteer

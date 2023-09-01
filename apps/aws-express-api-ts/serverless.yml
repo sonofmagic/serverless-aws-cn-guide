@@ -1,0 +1,50 @@
+service: aws-express-api-ts
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: cn-northwest-1
+
+layers:
+  uuid:
+    path: layers/uuid
+    name: ${sls:stage}-uuid
+
+functions:
+  api:
+    handler: dist/index.handler
+    timeout: 60
+    events:
+      - httpApi: "*"
+    package:
+      individually: true
+      patterns:
+        - dist/**
+        - package.json
+        - "!.build/**"
+        - "!node_modules/**"
+        - "!.build/**"
+        - "!src/**"
+        - "!tsconfig.json"
+        - "!tsup.config.ts"
+        - "!layers/**"
+    layers:
+      - !Ref UuidLambdaLayer
+      - arn:aws-cn:lambda:cn-northwest-1:${env:AWS_ACCOUNT_ID}:layer:dev-swc:1
+      - arn:aws-cn:lambda:cn-northwest-1:${env:AWS_ACCOUNT_ID}:layer:dev-puppeteer:1
+    environment:
+      NODE_PATH: "./:/opt/node_modules"
+
+plugins:
+  - serverless-dotenv-plugin
+  # - serverless-plugin-typescript
+  - serverless-offline
+
+custom:
+  # serverlessPluginTypescript:
+  #   tsConfigFileLocation: './tsconfig.json'
+  serverless-offline:
+    # ignoreJWTSignature: true
+    noPrependStageInUrl: true
+    noAuth: true
