@@ -1,0 +1,15 @@
+service: hello-world-js
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: cn-northwest-1 # 中国宁夏
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi:
+          path: /
+          method: get

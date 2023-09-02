@@ -9,6 +9,10 @@ provider:
 functions:
   hello:
     handler: handler.hello
+    package:
+      individually: true
+      patterns:
+        - '*'
     events:
       - httpApi:
           path: /
