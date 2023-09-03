@@ -31,8 +31,8 @@ functions:
         - "!layers/**"
     layers:
       - !Ref UuidLambdaLayer
-      - arn:aws-cn:lambda:cn-northwest-1:${env:AWS_ACCOUNT_ID}:layer:dev-swc:1
-      - arn:aws-cn:lambda:cn-northwest-1:${env:AWS_ACCOUNT_ID}:layer:dev-puppeteer:1
+      - arn:aws-cn:lambda:cn-northwest-1:000000000000:layer:dev-swc:1
+      - arn:aws-cn:lambda:cn-northwest-1:000000000000:layer:dev-puppeteer:1
     environment:
       NODE_PATH: "./:/opt/node_modules"
 

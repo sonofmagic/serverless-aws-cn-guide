@@ -18,6 +18,6 @@ Serverless Framework 亚马逊云(AWS)中国地区部署指南
 
 [知乎 - Serverless之我见](https://www.zhihu.com/column/c_1340357072555393024)
 
-## 代码以及文章仓库地址
+## 完整示例及文章仓库地址
 
 <https://github.com/sonofmagic/serverless-aws-cn-guide>
