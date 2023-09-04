@@ -10,9 +10,21 @@ Serverless Framework 亚马逊云(AWS)中国地区部署指南
 
 ## 目录
 
-[0.概览与快速开始](./chapter/0.overview.md)
+[]: TODO [x]:Finish
 
-[1.typescript 支持与本地调试](./chapter/1.nodejs-project.md)
+[0.概览与快速开始](./chapter/0.overview.md) [x]
+
+[1.typescript 支持与本地调试](./chapter/1.nodejs-project.md) [x]
+
+[2.依赖项的处理与层的创建与注册](./chapter/2.layer-and-deps.md) [x]
+
+[3.lambda nodejs 函数降低冷启动时间的最佳实践](./chapter/3.nodejs-bundle.md) [x]
+
+[4.更灵活的 serverless framework 配置文件](./chapter/4.config.md) []
+
+[5.与传统 nodejs web 框架的结合](./chapter/5.web-framework.md) []
+
+[6.monorepo 下的 serverless 函数管理](./chapter/6.monorepo.md) []
 
 ## 相关的专栏
 
