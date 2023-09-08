@@ -21,7 +21,7 @@ Serverless Framework 亚马逊云(AWS)中国地区部署指南
 
 - [x] [3.lambda nodejs 函数降低冷启动时间的最佳实践](./chapter/3.nodejs-bundle.md)
 
-- [ ] [4.更灵活的 serverless framework 配置文件](./chapter/4.config.md)
+- [x] [4.更灵活的 serverless framework 配置文件](./chapter/4.config.md)
 
 - [ ] [5.与传统 nodejs web 框架的结合](./chapter/5.web-framework.md)
 
