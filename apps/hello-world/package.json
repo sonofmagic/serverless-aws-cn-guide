@@ -2,6 +2,9 @@
   "name": "hello-world",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "sls:deploy": "sls deploy --verbose",
@@ -11,10 +14,7 @@
     "package": "sls package",
     "_dev:hello": "sls dev -f hello --verbose"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-   
+
   }
 }

@@ -1,23 +1,24 @@
-const serverless = require("serverless-http");
-const express = require("express");
-const app = express();
+const serverless = require('serverless-http')
+const express = require('express')
 
-app.get("/", (req, res, next) => {
-  return res.status(200).json({
-    message: "Hello from root!",
-  });
-});
+const app = express()
 
-app.get("/path", (req, res, next) => {
+app.get('/', (req, res, next) => {
   return res.status(200).json({
-    message: "Hello from path!",
-  });
-});
+    message: 'Hello from root!',
+  })
+})
+
+app.get('/path', (req, res, next) => {
+  return res.status(200).json({
+    message: 'Hello from path!',
+  })
+})
 
 app.use((req, res, next) => {
   return res.status(404).json({
-    error: "Not Found",
-  });
-});
+    error: 'Not Found',
+  })
+})
 
-module.exports.handler = serverless(app);
+module.exports.handler = serverless(app)

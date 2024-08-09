@@ -2,6 +2,9 @@
   "name": "aws-express-api-ts",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "./dist/index.cjs",
   "types": "./dist/index.d.ts",
   "files": [
@@ -16,9 +19,6 @@
     "offline": "sls offline",
     "package": "sls package"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "@sparticuz/chromium": "^126.0.0",
     "@swc/core": "^1.7.6",

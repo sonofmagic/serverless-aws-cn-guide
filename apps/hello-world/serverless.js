@@ -8,7 +8,7 @@ const serverlessConfiguration = {
   provider: {
     name: 'aws',
     runtime: 'nodejs18.x',
-    region: 'cn-northwest-1'
+    region: 'cn-northwest-1',
   },
   functions: {
     hello: {
@@ -17,22 +17,22 @@ const serverlessConfiguration = {
         {
           httpApi: {
             method: 'get',
-            path: '/'
-          }
-        }
-      ]
-    }
+            path: '/',
+          },
+        },
+      ],
+    },
   },
   plugins: ['serverless-esbuild', 'serverless-offline'],
   custom: {
-    esbuild: {
-      sourcemap: true
+    'esbuild': {
+      sourcemap: true,
     },
     'serverless-offline': {
       noPrependStageInUrl: true,
-      noAuth: true
-    }
-  }
+      noAuth: true,
+    },
+  },
 }
 
 module.exports = serverlessConfiguration

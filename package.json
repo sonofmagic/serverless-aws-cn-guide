@@ -1,17 +1,17 @@
 {
   "name": "serverless-aws-cn-guide",
+  "type": "module",
   "version": "0.0.1",
   "private": true,
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@9.7.0",
+  "engines": {
+    "node": ">=16.0.0"
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev --parallel",
     "test": "vitest run --coverage.enabled",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "release": "turbo run release",
     "publish-packages": "turbo run build lint test && changeset version && changeset publish",
     "preinstall": "npx only-allow pnpm"
@@ -19,6 +19,7 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.7",
+    "@icebreakers/eslint-config": "^0.3.19",
     "@serverless/typescript": "^3.38.0",
     "@types/aws-lambda": "^8.10.143",
     "@types/lodash-es": "^4.17.12",
@@ -26,28 +27,20 @@
     "@vitest/coverage-v8": "^2.0.5",
     "cross-env": "^7.0.3",
     "eslint": "^9.8.0",
-    "eslint-config-icebreaker": "^1.2.3",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
     "lodash-es": "^4.17.21",
     "only-allow": "^1.2.1",
-    "prettier": "^3.3.3",
     "serverless-dotenv-plugin": "^6.0.0",
     "serverless-esbuild": "^1.52.1",
     "serverless-offline": "^14.0.0",
     "serverless-plugin-typescript": "^2.1.5",
-    "ts-node": "^10.9.2",
     "tslib": "^2.6.3",
     "tsup": "^8.2.4",
+    "tsx": "^4.17.0",
     "turbo": "^2.0.12",
     "typescript": "^5.5.4",
     "unbuild": "^2.0.0",
     "vitest": "^2.0.5"
   },
-  "engines": {
-    "node": ">=16.0.0"
-  },
-  "packageManager": "pnpm@8.6.12",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"

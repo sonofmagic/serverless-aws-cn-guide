@@ -2,13 +2,13 @@
   "name": "hello-world-js",
   "version": "1.0.0",
   "description": "",
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
   "main": "index.js",
   "scripts": {
     "deploy:dev": "sls deploy",
     "deploy:sit": "sls deploy -s sit",
     "deploy:prod": "sls deploy -s prod"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }

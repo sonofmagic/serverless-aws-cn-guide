@@ -1,18 +1,12 @@
 {
   "name": "@icebreakers/foo",
+  "type": "commonjs",
   "version": "0.0.3",
   "description": "my foo your bar pkg",
-  "scripts": {
-    "build": "unbuild",
-    "test": "vitest run",
-    "test:dev": "vitest",
-    "release": "pnpm publish"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "keywords": [],
   "sideEffects": false,
-  "type": "commonjs",
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
@@ -26,6 +20,12 @@
   "files": [
     "dist"
   ],
+  "scripts": {
+    "build": "unbuild",
+    "test": "vitest run",
+    "test:dev": "vitest",
+    "release": "pnpm publish"
+  },
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org"
