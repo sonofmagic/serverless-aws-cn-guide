@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "deploy": "sls deploy --verbose",
+    "sls:deploy": "sls deploy --verbose",
     "invoke:hello": "sls invoke -f hello --log",
     "invoke:local": "sls invoke local -f hello",
     "offline": "sls offline",
